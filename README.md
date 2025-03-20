@@ -1,6 +1,6 @@
 ## 📊 Excel Dashboard Preview  
 ![Pizza Sales Dashboard](dashboard.png)
-readme_content = """# 🍕 Slice & Analyze: Uncovering Pizza Sales Trends with SQL & Excel
+# 🍕 Slice & Analyze: Uncovering Pizza Sales Trends with SQL & Excel
 
 ## 📌 Project Overview
 
