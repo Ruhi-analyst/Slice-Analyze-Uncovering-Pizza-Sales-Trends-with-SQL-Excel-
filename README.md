@@ -1,86 +1,67 @@
-🍕 Slice & Analyze: Uncovering Pizza Sales Trends with SQL & Excel
+## 📊 Excel Dashboard Preview  
+![Pizza Sales Dashboard](dashboard.png)
+readme_content = """# 🍕 Slice & Analyze: Uncovering Pizza Sales Trends with SQL & Excel
 
-📌 Project Overview
+## 📌 Project Overview
 
-This project focuses on analyzing pizza sales data using SQL for data preprocessing and Excel for visualization and dashboard creation. By leveraging both tools, we efficiently clean, transform, and present key business insights.
+This project focuses on analyzing pizza sales data using **SQL for data preprocessing** and **Excel for visualization and dashboard creation**. By leveraging both tools, we efficiently clean, transform, and present key business insights.
 
-📊 Key Objectives
+## 📊 Key Objectives
 
-Clean and preprocess raw pizza sales data.
+- Clean and preprocess raw pizza sales data.
+- Calculate essential **KPIs** like total revenue, average order value, and total pizzas sold.
+- Generate **interactive Excel dashboards** with charts to visualize sales trends.
 
-Calculate essential KPIs like total revenue, average order value, and total pizzas sold.
+## 🛠️ Technologies Used
 
-Generate interactive Excel dashboards with charts to visualize sales trends.
+- **SQL** (Data Cleaning & Aggregation)
+- **Excel** (Data Cleaning, Pivot Tables, Charts, Dashboard Creation)
 
-🛠️ Technologies Used
+## 📂 Data Processing Steps
 
-SQL (Data Cleaning & Aggregation)
+### **1️⃣ Data Cleaning in SQL**
 
-Excel (Data Cleaning, Pivot Tables, Charts, Dashboard Creation)
+- Removed **duplicates** using `ROW_NUMBER()`.
+- Standardized text fields with `TRIM()`, `LOWER()`, and `UPPER()`.
 
-📂 Data Processing Steps
+### **2️⃣ Data Aggregation & Summarization**
 
-1️⃣ Data Cleaning in SQL
+- Used `SUM()`, `COUNT()`, and `AVG()` for KPIs.
+- Extracted time-based insights using `DATENAME(WEEKDAY, order_date)` and `DATEPART(HOUR, order_time)`.
+- Filtered **last 6 months' sales data** before exporting to Excel.
 
-Removed duplicates using ROW_NUMBER().
+### **3️⃣ Data Cleaning in Excel**
 
-Standardized text fields with TRIM(), LOWER(), and UPPER().
+- Used **Find & Replace** to correct pizza size inconsistencies.
+- Applied formulas:
+  - `=TEXT([@[order_date]],"dddd")` → Extract weekday name.
+  - `=1/COUNTIF(B:B,[@[order_id]])` → Identify unique orders.
+- Removed duplicates using **Excel’s Remove Duplicates feature**.
 
-2️⃣ Data Aggregation & Summarization
+## 📊 KPI Metrics Tracked
 
-Used SUM(), COUNT(), and AVG() for KPIs.
+1. **Total Revenue**
+2. **Average Order Value**
+3. **Total Pizzas Sold**
+4. **Total Orders**
+5. **Average Pizzas Per Order**
 
-Extracted time-based insights using DATENAME(WEEKDAY, order_date) and DATEPART(HOUR, order_time).
+## 📈 Charts & Visualizations
 
-Filtered last 6 months' sales data before exporting to Excel.
+- **Daily Trend for Total Orders** (Bar Chart)
+- **Hourly Trend for Orders** (Line Chart)
+- **Sales Breakdown by Pizza Category** (Pie Chart)
+- **Sales Breakdown by Pizza Size** (Pie Chart)
+- **Total Pizzas Sold by Category** (Funnel Chart)
+- **Top 5 Best-Selling Pizzas** (Bar Chart)
+- **Bottom 5 Worst-Selling Pizzas** (Bar Chart)
 
-3️⃣ Data Cleaning in Excel
+## 🔥 Why SQL & Excel?
 
-Used Find & Replace to correct pizza size inconsistencies.
+- **SQL:** Handles large datasets efficiently, speeds up queries, and pre-aggregates data before export.
+- **Excel:** Provides an interactive and visually appealing dashboard with pivot tables and charts.
 
-Applied formulas:
+## 📌 Conclusion
 
-=TEXT([@[order_date]],"dddd") → Extract weekday name.
-
-=1/COUNTIF(B:B,[@[order_id]]) → Identify unique orders.
-
-Removed duplicates using Excel’s Remove Duplicates feature.
-
-📊 KPI Metrics Tracked
-
-Total Revenue
-
-Average Order Value
-
-Total Pizzas Sold
-
-Total Orders
-
-Average Pizzas Per Order
-
-📈 Charts & Visualizations
-
-Daily Trend for Total Orders (Bar Chart)
-
-Hourly Trend for Orders (Line Chart)
-
-Sales Breakdown by Pizza Category (Pie Chart)
-
-Sales Breakdown by Pizza Size (Pie Chart)
-
-Total Pizzas Sold by Category (Funnel Chart)
-
-Top 5 Best-Selling Pizzas (Bar Chart)
-
-Bottom 5 Worst-Selling Pizzas (Bar Chart)
-
-🔥 Why SQL & Excel?
-
-SQL: Handles large datasets efficiently, speeds up queries, and pre-aggregates data before export.
-
-Excel: Provides an interactive and visually appealing dashboard with pivot tables and charts.
-
-📌 Conclusion
-
-By combining SQL and Excel, we streamlined the data processing pipeline, ensured accurate insights, and built an efficient dashboard to help businesses make data-driven decisions. 🚀
-
+By combining SQL and Excel, we streamlined the data processing pipeline, ensured **accurate insights**, and built an **efficient dashboard** to help businesses make data-driven decisions. 🚀
+"""
