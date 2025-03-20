@@ -14,7 +14,7 @@ This project focuses on analyzing pizza sales data using **SQL for data preproce
 
 ## 🛠️ Technologies Used
 
-- **SQL** (Data Cleaning & Aggregation)
+- **SQL** (Pre-Data Cleaning & Aggregation)
 - **Excel** (Data Cleaning, Pivot Tables, Charts, Dashboard Creation)
 
 ## 📂 Data Processing Steps
